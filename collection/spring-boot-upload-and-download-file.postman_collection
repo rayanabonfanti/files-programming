@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "908986c7-a056-43bd-933c-3bac151f56f7",
+		"name": "spring-boot-upload-and-download-file",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21117286"
+	},
+	"item": [
+		{
+			"name": "image-data",
+			"item": [
+				{
+					"name": "upload-file",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/D:/Arquivos Rayana/(Emprego)/(Alura)/aws/1232-aula01/fotos/1-spiderman-space_skate-marvel.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8090/image",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "download-file",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/image/1-spiderman-space_skate-marvel.jpg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"image",
+								"1-spiderman-space_skate-marvel.jpg"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
